@@ -1,3 +1,4 @@
+import javax.print.attribute.Attribute;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,13 +21,6 @@ public class Node extends JButton implements ActionListener {
         addActionListener(this);
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-        setBackground(Color.orange);
-
-    }
-
     public void setAsStart(){
 
         setBackground(Color.GREEN);
@@ -41,7 +35,12 @@ public class Node extends JButton implements ActionListener {
         setForeground(Color.black);
         setText("Goal");
         goal = true;
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        setAsSolid();
+        getParent().requestFocusInWindow();
     }
 
     public void setAsSolid(){
@@ -49,6 +48,22 @@ public class Node extends JButton implements ActionListener {
         setBackground(Color.BLACK);
         setForeground(Color.black);
         solid = true;
-
     }
+    public void setAsOpen(){
+        open = true;
+    }
+    public void setAsChecked(){
+        if(start == false && goal == false){
+
+            setBackground(Color.orange);
+            setForeground(Color.black);
+        }
+        checked = true;
+    }
+    public void setAsPath(){
+        setBackground(Color.BLUE);
+        setForeground(Color.BLACK);
+    }
+
+
 }
