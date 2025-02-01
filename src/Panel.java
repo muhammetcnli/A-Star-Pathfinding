@@ -107,7 +107,7 @@ public class Panel extends JPanel{
         node.fCost = node.gCost + node.hCost;
 
         if(node != startNode && node != goalNode){
-            node.setText("<html>F:" + node.fCost + "<br>G: " + node.gCost + "<html/>");
+            //node.setText("<html>F:" + node.fCost + "<br>G: " + node.gCost + "<html/>");
         }
     }
     public void autoSearch() {

@@ -9,6 +9,7 @@ public class Main {
 
 
         window.add(new Panel());
+        window.setTitle("A * Pathfinding");
         window.pack();
         window.setLocationRelativeTo(null);
 
