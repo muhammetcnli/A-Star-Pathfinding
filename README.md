@@ -41,12 +41,8 @@ Below are two GIF demonstrations of the application’s functionality:
    cd A-Star-Pathfinding
 2. Compile the Project
 
-You can compile the project using your preferred IDE or from the command line. To compile from the command line, navigate to the project's source directory and run:
+You can compile the project using your preferred IDE or from the command line.
 
- ```bash
-javac -d bin src/**/*.java
-Run the Application
-```
 3. Run the Application
 
 After compiling, run the application using:
